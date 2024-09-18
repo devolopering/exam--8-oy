@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCoins } from '../context/CoinsContext';
 import LineChart from '../Components/chartJs/LineChart';
+import { LineProvider } from '../context/LineContext';
 
 function SingleCoin() {
   const { id } = useParams();
@@ -37,12 +38,12 @@ function SingleCoin() {
   if (!coins) return <div>No data found</div>;
 
   return (
-    <div className=' min-h-screen font-montserrat '>
-      <div>
-        <div className='w-[547px] flex items-start  flex-col '>
+    <div className=' min-h-screen font-montserrat max-w-[1920px] mx-auto px-5 '>
+      <div className='grid grid-cols-3 gap-10'>
+        <div className=' col-span-1  mt-[25px] flex items-start border-r-2  flex-col '>
         <img src={coins.image.large} alt={coins.name} />
       <h2 className='capitalize font-roboto font-bold text-5xl text-center text-white  '>{coins.name}</h2>
-      <p className='line-clamp-3 '> {coins.description.en}</p>
+      <p className='line-clamp-2 w-full'> {coins.description.en}</p>
       <p className='text-white'><strong>Rank</strong>: {coins.market_cap_rank}</p>
 
       <p className='text-white '><strong>Market Cap</strong>:
@@ -51,7 +52,13 @@ function SingleCoin() {
           currency === 'CAD' ? `C$ ${coins.market_data.current_price.cad}` : coins.market_data.current_price}M</p>
           <p>{coins.market_cap}</p>
         </div>
-        <div><LineChart/></div>
+          <LineProvider>
+          <div className='col-span-2 mt-[65px]'>
+          <LineChart/>
+          </div> 
+          </LineProvider>
+         
+       
       </div>
       
     </div>

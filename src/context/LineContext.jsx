@@ -1,21 +1,20 @@
-// context/LineContext.js
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Create the LineContext
 const LineContext = createContext();
 
-// Custom hook to use the LineContext
+
 export const useLineData = () => {
   return useContext(LineContext);
 };
 
-// Provider component to fetch and provide chart data
+
 export const LineProvider = ({ children }) => {
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Function to fetch coin data for a specific time period
+  
   const fetchCoinData = async (timePeriod) => {
     setLoading(true);
     setError(null);
@@ -38,7 +37,7 @@ export const LineProvider = ({ children }) => {
             label: `Price over ${timePeriod} days`,
             data: data.prices.map(([, price]) => price),
             fill: false,
-            tension: 0.2,
+            tension: 0.3,
             borderColor: "#42a5f5",
             backgroundColor: "#90caf9",
           },
