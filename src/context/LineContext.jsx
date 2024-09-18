@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const LineContext = createContext();
 
@@ -34,7 +34,7 @@ export const LineProvider = ({ children }) => {
         ),
         datasets: [
           {
-            label: `Price over ${timePeriod} days`,
+            label: `Price over ${timePeriod} Days`,
             data: data.prices.map(([, price]) => price),
             fill: false,
             tension: 0.3,
@@ -51,7 +51,7 @@ export const LineProvider = ({ children }) => {
     }
   };
 
-  // Provide data and fetch function to children
+ 
   return (
     <LineContext.Provider value={{ chartData, fetchCoinData, loading, error }}>
       {children}

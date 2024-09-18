@@ -29,7 +29,7 @@ const LineChart = () => {
   const { chartData, fetchCoinData, loading, error } = useLineData();
   const [timePeriod, setTimePeriod] = useState("1");
 
-  // Fetch data when time period changes
+ 
   useEffect(() => {
     fetchCoinData(timePeriod);
   }, [timePeriod]);
