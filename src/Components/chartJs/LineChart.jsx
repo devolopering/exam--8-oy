@@ -12,6 +12,7 @@ import {
   Legend,
   Filler,
 } from "chart.js";
+import { Button } from "flowbite-react";
 
 ChartJS.register(
   CategoryScale,
@@ -41,36 +42,36 @@ const LineChart = () => {
       <Line data={chartData} />
       <div className="flex gap-4 mt-4">
       
-        <button
-          className={`px-4 py-2 ${timePeriod === "1" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <Button
+          className={`w-[284px] text-left${timePeriod === "1" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
           onClick={() => setTimePeriod("1")}
         >
           24 Hours
-        </button>
+        </Button>
         
       
-        <button
-          className={`px-4 py-2 ${timePeriod === "30" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <Button
+          className={`w-[284px] text-left ${timePeriod === "30" ? "bg-blue-600 text-white" : "bg-transparent"} rounded`}
           onClick={() => setTimePeriod("30")}
         >
           30 Days
-        </button>
+        </Button>
         
      
-        <button
-          className={`px-4 py-2 ${timePeriod === "90" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <Button
+          className={`w-[284px] text-left${timePeriod === "90" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
           onClick={() => setTimePeriod("90")}
         >
           3 Months
-        </button>
+        </Button>
         
 
-        <button
-          className={`px-4 py-2 ${timePeriod === "365" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <Button
+          className={`w-[284px] text-left${timePeriod === "365" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
           onClick={() => setTimePeriod("365")}
         >
           1 Year
-        </button>
+        </Button>
       </div>
     </div>
   );
