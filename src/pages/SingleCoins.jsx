@@ -38,30 +38,35 @@ function SingleCoin() {
   if (!coins) return <div>No data found</div>;
 
   return (
-    <div className=' min-h-screen font-montserrat max-w-[1920px] mx-auto px-5 '>
-      <div className='grid grid-cols-3 gap-10'>
-        <div className=' col-span-1  mt-[25px] flex items-start border-r-2  flex-col '>
-        <img src={coins.image.large} alt={coins.name} />
-      <h2 className='capitalize font-roboto font-bold text-5xl text-center text-white  '>{coins.name}</h2>
-      <p className='line-clamp-2 w-full'> {coins.description.en}</p>
-      <p className='text-white'><strong>Rank</strong>: {coins.market_cap_rank}</p>
 
-      <p className='text-white '><strong>Market Cap</strong>:
-         {currency === 'USD' ? `$ ${coins.market_data.current_price.usd}` : 
-          currency === 'EUR' ? `€ ${coins.market_data.current_price.eur} `: 
-          currency === 'CAD' ? `C$ ${coins.market_data.current_price.cad}` : coins.market_data.current_price}M</p>
-          <p>{coins.market_cap}</p>
+    <div className="max-w-[1920px] mx-auto px-5 min-h-screen w-full  grid grid-cols-3 items-center justify-between gap-10">
+      <div className="col-span-1 mt-[25px] flex items-start  border-r-2 pr-6 flex-col">
+        <div className="flex flex-col items-center w-full">
+          <img src={coins.image.large} alt={coins.name} />
+          <h2 className="capitalize font-roboto font-bold mb-5 text-5xl text-center text-white">
+            {coins.name}
+          </h2>
         </div>
-          <LineProvider>
-          <div className='col-span-2 mt-[65px]'>
-          <LineChart/>
-          </div> 
-          </LineProvider>
-         
-       
+        <p className="line-clamp-3 w-full mb-4">{coins.description.en}</p>
+        <p className="text-white mb-5">
+          <strong>Rank</strong>: {coins.market_cap_rank}
+        </p>
+        <p className="text-white">
+          <strong>Market Cap</strong>:
+          {currency === 'USD' ? `$ ${coins.market_data.current_price.usd}` : 
+            currency === 'EUR' ? `€ ${coins.market_data.current_price.eur}` : 
+            currency === 'CAD' ? `C$ ${coins.market_data.current_price.cad}` : coins.market_data.current_price}M
+        </p>
+        <p>{coins.market_cap}</p>
       </div>
-      
-    </div>
+      <LineProvider>
+        <div className="col-span-2 mt-[65px] w-full">
+          <LineChart />
+        </div>
+      </LineProvider>
+  </div>
+  
+  
   );
 }
 

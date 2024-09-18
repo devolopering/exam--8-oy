@@ -5,12 +5,12 @@ import SingleCoin from "./pages/SingleCoins";
 
 function App() {
   return (
-    <div className="bg-[#14161A]">
+    <div className="bg-[#14161A] max-w-[1920px] mx-auto">
       <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Coins />} />
-          <Route path="/coins/:id" element={<div className="max-w-[1140px] mx-auto"><SingleCoin /></div>} />
+          <Route path="/coins/:id" element={<div><SingleCoin /></div>} />
         </Routes>
       </Router>
     </div>

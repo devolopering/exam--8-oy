@@ -66,11 +66,11 @@ export default function Coins() {
       base: "xs:mt-0 mt-2 inline-flex items-center -space-x-px",
       showIcon: "inline-flex",
       previous: {
-        base: "ml-0 rounded-full border-none bg-transparent px-2 py-2 mt-2 leading-tighttext-[#87CEEB] enabled:hover:bg-transparent enabled:hover:hover:text-[#87CEEB] dark:border-gray-700 dark:bg-transparent dark:text-[#87CEEB] enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
+        base: "ml-0 rounded-full border-none bg-transparent px-3 py-3 mt-2 leading-tighttext-[#87CEEB] enabled:hover:bg-transparent enabled:hover:hover:text-[#87CEEB] dark:border-gray-700 dark:bg-transparent dark:text-[#87CEEB] enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
         icon: "h-5 w-5"
       },
       next: {
-        base: "rounded-full border-none bg-transparent px-2 py-2 mt-2 leading-tighttext-[#87CEEB] enabled:hover:bg-transparent enabled:hover:hover:text-[#87CEEB] dark:border-gray-700 dark:bg-transparent dark:text-[#87CEEB] enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
+        base: "rounded-full border-none bg-transparent px-3 py-3 mt-2 leading-tighttext-[#87CEEB] enabled:hover:bg-transparent enabled:hover:hover:text-[#87CEEB] dark:border-gray-700 dark:bg-transparent dark:text-[#87CEEB] enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
         icon: "h-5 w-5"
       },
       selector: {
@@ -140,7 +140,7 @@ export default function Coins() {
           </Table>
         </div>
 
-        <div className="flex overflow-x-auto sm:justify-center my-4">
+        <div className="flex overflow-x-auto sm:justify-center my-4 pb-5">
           <Pagination theme={customTheme} className="bg-transparent border-none mt-2"
              currentPage={currentPage}
              totalPages={totalPages} 
