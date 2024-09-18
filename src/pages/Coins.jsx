@@ -10,6 +10,7 @@ export default function Coins() {
   const { selectedCoins, toggleCoinSelection, currency,  coins, setCoins, loading, setLoading, error, setError } = useCoins(); 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(100);
+  const [searchCoin, setSearchCoin] = useState('');
 
   const fetchCoins = async (page) => {
     setLoading(true);
@@ -81,6 +82,10 @@ export default function Coins() {
     }
   };
 
+  const filteredCoins = coins.filter((coin) => 
+  coin.name.toLowerCase().includes(searchCoin.toLowerCase()) || 
+  coin.symbol.toLowerCase().includes(searchCoin.toLowerCase())
+);
 
   return (
     <div className="bg-[#14161A] max-w-[1920px] mx-auto">
@@ -91,6 +96,8 @@ export default function Coins() {
         <div className="max-w-[1232px] mx-auto mt-4 px-5">
         <h3 className='font-roboto font-normal  text-white mt-[18px] mb-3 text-[34px] text-center'>Cryptocurrency Prices by Market Cap</h3>
         <input
+        value={searchCoin}
+        onChange={(e) => setSearchCoin(e.target.value)}
         type="text"
         placeholder="Search For a Crypto Currency.."
         className="input w-full border-slate-500 mb-5 rounded-[5px]"
@@ -103,7 +110,7 @@ export default function Coins() {
               <Table.HeadCell>Market Cap</Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y font-roboto">
-              {coins.map((coin) => (
+              {filteredCoins.map((coin) => (
                 <Table.Row key={coin.id} className="dark:bg-transparent dark:border-gray-700">
                   <Table.Cell className="flex items-center gap-4 text-gray-900 dark:text-white">
                     <img className="w-[50px] h-[50px]" src={coin.image} alt={coin.name} />
