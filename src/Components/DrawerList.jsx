@@ -17,6 +17,8 @@ function DrawerList() {
   const customTheme = {
     drawer: {
       root: {
+        base: "fixed z-40 overflow-y-auto bg-white p-4 transition-transform dark:bg-[#515151]",
+        backdrop: "fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80",
         position: {
           right: {
             on: "right-0 top-0 h-screen w-[500px] transform-none",
