@@ -58,7 +58,7 @@ export default function Coins() {
         }
       },
       selector: {
-        base: "w-10 h-10 border-b border-gray-700  dark:border-gray-700 ",
+        base: "w-10 h-10 border-b-2 border-gray-700  dark:border-gray-700 ",
         active: " dark:border-gray-700 dark:bg-gray-700 dark:text-white",
         disabled: "cursor-not-allowed opacity-50"
       }
@@ -102,7 +102,7 @@ export default function Coins() {
         placeholder="Search For a Crypto Currency.."
         className="input w-full border-slate-500 mb-5 rounded-[5px]"
       />
-          <Table striped>
+          <Table striped className='border-b border-gray-500'>
             <Table.Head className="bg-[#2d85a8] font-montserrat font-bold text-sm px-4 py-5">
               <Table.HeadCell>Coin</Table.HeadCell>
               <Table.HeadCell>Price</Table.HeadCell>
