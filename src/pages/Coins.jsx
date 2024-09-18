@@ -102,7 +102,7 @@ export default function Coins() {
         placeholder="Search For a Crypto Currency.."
         className="input w-full border-slate-500 mb-5 rounded-[5px]"
       />
-          <Table striped className='border-b border-gray-500'>
+          <Table striped className='border-b border-gray-600'>
             <Table.Head className="bg-[#2d85a8] font-montserrat font-bold text-sm px-4 py-5">
               <Table.HeadCell>Coin</Table.HeadCell>
               <Table.HeadCell>Price</Table.HeadCell>
@@ -147,7 +147,7 @@ export default function Coins() {
           </Table>
         </div>
 
-        <div className="flex overflow-x-auto sm:justify-center my-4 pb-5">
+        <div className="flex overflow-x-auto sm:justify-center mt-4 pb-5">
           <Pagination theme={customTheme} className="bg-transparent border-none mt-2"
              currentPage={currentPage}
              totalPages={totalPages} 
