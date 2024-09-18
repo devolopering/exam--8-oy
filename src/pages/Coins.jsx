@@ -93,7 +93,7 @@ export default function Coins() {
 
       <Flowbite theme={{ theme: customTheme }}  >
 
-        <div className="max-w-[1232px] mx-auto mt-4 px-5">
+        <div className="max-w-[1280px] mx-auto mt-4 px-6">
         <h3 className='font-roboto font-normal  text-white mt-[18px] mb-3 text-[34px] text-center'>Cryptocurrency Prices by Market Cap</h3>
         <input
         value={searchCoin}

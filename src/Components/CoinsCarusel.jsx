@@ -28,7 +28,7 @@ function CoinsCarousel() {
 
   return (
     <div>
-      <div className="relative h-56 sm:h-64 xl:h-80 2xl:h-96">
+      <div className="relative h-56 sm:h-64 xl:h-80 2xl:h-96 max-w-[1232px] mx-auto">
         <Carousel indicators={false} theme={customTheme}>
           {coinsNum.map((coinsGroup, index) => (
             <div key={index} className="flex justify-around space-x-4">
