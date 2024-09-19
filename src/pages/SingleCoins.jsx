@@ -6,7 +6,6 @@ import { LineProvider } from '../context/LineContext';
 
 function SingleCoin() {
   const { id } = useParams();
-  console.log(id)
   const { coins, setCoins, loading, currency, setLoading, error, setError } = useCoins();
   
   useEffect(() => {
@@ -19,7 +18,6 @@ function SingleCoin() {
           throw new Error('Failed to fetch coin data');
         }
         const fetchedCoin = await response.json();
-        console.log(fetchedCoin)
         setCoins(fetchedCoin);  
       } catch (err) {
         setError(err.message);
@@ -31,18 +29,17 @@ function SingleCoin() {
 
     fetchCoin();
   }, [id]);
-  console.log(coins)
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+ 
+  if (loading) return <p className='mt-[78px] font-bold text-3xl text-white font-montserrat'>Loading...</p>;
+  if (error) return <p className='mt-[78px] text-3xl font-medium text-red-500'>Error:{error}</p>;
 
   if (!coins) return <div>No data found</div>;
 
   return (
-
-    <div className="max-w-[1920px] mx-auto px-5 min-h-screen w-full  grid grid-cols-3 items-center justify-between gap-10">
-      <div className="col-span-1 mt-[25px] flex items-start h-[588px]  border-r-2 pr-6 flex-col">
+    <div className="max-w-[1920px] mt-[60px] mx-auto px-5 min-h-screen w-full grid grid-cols-1 lg:grid-cols-3 items-center justify-between gap-10">
+      <div className="col-span-1 mt-[25px] flex items-start lg:h-[588px] lg:border-r-2 lg:pr-6 flex-col">
         <div className="flex flex-col items-center w-full">
-          <img src={coins.image.large} alt={coins.name} />
+          <img className='max-w-[200px] max-h-[200px]' src={coins.image.large} alt={coins.name} />
           <h2 className="capitalize font-roboto font-bold mb-5 text-5xl text-center text-white">
             {coins.name}
           </h2>
@@ -60,13 +57,11 @@ function SingleCoin() {
         <p>{coins.market_cap}</p>
       </div>
       <LineProvider>
-        <div className="col-span-2 mt-[65px] w-full">
+        <div className="col-span-2 lg:mt-[65px] w-full">
           <LineChart />
         </div>
       </LineProvider>
-  </div>
-  
-  
+    </div>
   );
 }
 

@@ -39,8 +39,8 @@ export default function Coins() {
 
   const onPageChange = (page) => setCurrentPage(page);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <p className='mt-[78px] font-bold text-3xl text-white font-montserrat'>Loading...</p>;
+  if (error) return <p className='mt-[78px] text-3xl font-medium text-red-500'>{error}</p>;
 
  
 
@@ -88,7 +88,7 @@ export default function Coins() {
 );
 
   return (
-    <div className="bg-[#14161A] max-w-[1920px] mx-auto">
+    <div className="bg-[#14161A] max-w-[1920px] mx-auto mt-[78px]">
       <HeroSection />
 
       <Flowbite theme={{ theme: customTheme }}  >

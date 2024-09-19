@@ -12,7 +12,7 @@ function Header() {
   };
 
   return (
-    <div className='bg-[#14161A] max-w-[1920px] shadow-lg border-b border-[#14161A] overflow-hidden mx-auto px-5 py-4'>
+    <div className='bg-[#14161A] fixed right-0 left-0 top-0 z-40 max-w-[1920px] shadow-lg border-b border-[#14161A] overflow-hidden mx-auto px-5 py-4'>
       <div className='max-w-[1232px] mx-auto'>
         <header className='flex justify-between items-center'>
           <Link to={'/'} className='' >
