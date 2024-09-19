@@ -114,7 +114,7 @@ export default function Coins() {
                 <Table.Row key={coin.id} className="dark:bg-transparent dark:border-gray-700">
                   <Table.Cell className="flex items-center gap-4 text-gray-900 dark:text-white">
                     <img className="w-[50px] h-[50px]" src={coin.image} alt={coin.name} />
-                    <Link to={`/coins/${coin.id}`} className="uppercase whitespace-nowrap font-normal text-[22px] flex flex-col items-start">
+                    <Link to={`/coins/${coin.id}`} className="uppercase whitespace-nowrap text-white font-normal text-[22px] flex flex-col items-start">
                       {coin.symbol}
                       <span className="text-sm font-normal text-[#A9A9A9] mt-1 capitalize ">{coin.name}</span>
                     </Link>
