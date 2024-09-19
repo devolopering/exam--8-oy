@@ -52,7 +52,7 @@ export default function Coins() {
         striped: "odd:bg-[transparent] even:bg-[transparent]",
       },
       head: {
-        base: "group/head text-xs uppercase text-gray-700 dark:text-[#87CEEB]",
+        base: "group/head text-xs uppercase bg-[#87CEEB] text-gray-700 dark:text-[#87CEEB]",
         cell: {
           base: "bg-[#2d85a8] text-black px-6 py-3 group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg "
         }
@@ -103,7 +103,7 @@ export default function Coins() {
         className="input w-full border-slate-500 mb-5 rounded-[5px]"
       />
           <Table striped className='border-b border-gray-600'>
-            <Table.Head className="bg-[#2d85a8] font-montserrat font-bold text-sm px-4 py-5">
+            <Table.Head className="bg-[#87CEEB] font-montserrat font-bold text-sm px-4 py-5">
               <Table.HeadCell>Coin</Table.HeadCell>
               <Table.HeadCell>Price</Table.HeadCell>
               <Table.HeadCell>24h Change</Table.HeadCell>
