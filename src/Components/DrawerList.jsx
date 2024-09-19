@@ -48,12 +48,19 @@ function DrawerList() {
         disabled: "cursor-not-allowed opacity-50",
       },
     },
+    button: {
+      color: {
+        blue: "bg-[#87CEEB] hover:bg-[#87CEEB] text-black",
+      },
+    }
   };
 
   return (
     <div>
       <div className="flex items-center justify-center">
-        <Button className="bg-[#87CEEB] font-roboto font-medium text-sm" onClick={() => setIsOpen(true)}>WATCH LIST</Button>
+        <Flowbite theme={{theme:customTheme}}>
+        <Button color={"blue"} className="font-roboto font-medium text-sm" onClick={() => setIsOpen(true)}>WATCH LIST</Button>
+        </Flowbite>
       </div>
 
       <Flowbite theme={{ theme: customTheme }}>

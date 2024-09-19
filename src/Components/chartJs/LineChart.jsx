@@ -43,7 +43,7 @@ const LineChart = () => {
       <div className="flex gap-4 mt-4">
       
         <button
-          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "1"? " bg-[#87CEEB] font-bold   text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "1"? " bg-[#87CEEB] font-bold   text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 hover:bg-[#87CEEB] hover:text-black duration-300 `}
           onClick={() => setTimePeriod("1")}
         >
           24 Hours
@@ -51,7 +51,7 @@ const LineChart = () => {
         
       
         <button
-          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "30" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "30" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 hover:bg-[#87CEEB] hover:text-black duration-300 `}
           onClick={() => setTimePeriod("30")}
         >
           30 Days
@@ -59,7 +59,7 @@ const LineChart = () => {
         
      
         <button
-          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "90" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "90" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 hover:bg-[#87CEEB] hover:text-black duration-300 `}
           onClick={() => setTimePeriod("90")}
         >
           3 Months
@@ -67,7 +67,7 @@ const LineChart = () => {
         
 
         <button
-          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "365" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "365" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 hover:bg-[#87CEEB] hover:text-black duration-300 `}
           onClick={() => setTimePeriod("365")}
         >
           1 Year

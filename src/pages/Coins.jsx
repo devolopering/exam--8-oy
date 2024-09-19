@@ -54,7 +54,7 @@ export default function Coins() {
       head: {
         base: "group/head text-xs uppercase bg-[#87CEEB] text-gray-700 dark:text-[#87CEEB]",
         cell: {
-          base: "bg-[#2d85a8] text-black px-6 py-3 group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg "
+          base: "bg-[#87CEEB] text-black px-6 py-3 group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg "
         }
       },
       selector: {
