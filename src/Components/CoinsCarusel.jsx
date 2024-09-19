@@ -51,7 +51,7 @@ function CoinsCarousel() {
                   <p className="mt-1 text-[21px] text-white font-medium font-roboto">
                         {currency === 'USD' ? `$ ${coin.current_price}` : 
                          currency === 'EUR' ? `€ ${coin.current_price} `: 
-                         currency === 'CAD' ? `C$ ${coin.current_price}` : coin.current_price}
+                         currency === 'RUB' ? `₽ ${coin.current_price}` : coin.current_price}
                   </p>
                 </div>
               ))}

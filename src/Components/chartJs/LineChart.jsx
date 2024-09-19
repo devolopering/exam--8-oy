@@ -42,36 +42,36 @@ const LineChart = () => {
       <Line data={chartData} />
       <div className="flex gap-4 mt-4">
       
-        <Button
-          className={`w-[284px] text-left${timePeriod === "1" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <button
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "1"? " bg-[#87CEEB] font-bold   text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
           onClick={() => setTimePeriod("1")}
         >
           24 Hours
-        </Button>
+        </button>
         
       
-        <Button
-          className={`w-[284px] text-left ${timePeriod === "30" ? "bg-blue-600 text-white" : "bg-transparent"} rounded`}
+        <button
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "30" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
           onClick={() => setTimePeriod("30")}
         >
           30 Days
-        </Button>
+        </button>
         
      
-        <Button
-          className={`w-[284px] text-left${timePeriod === "90" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <button
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "90" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
           onClick={() => setTimePeriod("90")}
         >
           3 Months
-        </Button>
+        </button>
         
 
-        <Button
-          className={`w-[284px] text-left${timePeriod === "365" ? "bg-blue-600 text-white" : "bg-gray-200"} rounded`}
+        <button
+          className={`w-[284px] text-left font-montserrat text-base    font-medium ${timePeriod === "365" ? "bg-[#87CEEB] font-bold text-black" : "bg-transparent text-white"} rounded border-2 border-[#87CEEB] pl-[21px] py-1 `}
           onClick={() => setTimePeriod("365")}
         >
           1 Year
-        </Button>
+        </button>
       </div>
     </div>
   );

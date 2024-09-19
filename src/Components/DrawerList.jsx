@@ -17,12 +17,12 @@ function DrawerList() {
   const customTheme = {
     drawer: {
       root: {
-        base: "fixed z-40 overflow-y-auto bg-white p-4 transition-transform dark:bg-[#515151]",
+        base: "fixed z-40 overflow-y-auto bg-white p-2 transition-transform dark:bg-[#515151]",
         backdrop: "fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80",
         position: {
           right: {
-            on: "right-0 top-0 h-screen w-[500px] transform-none",
-            off: "right-0 top-0 h-screen w-[500px] translate-x-full",
+            on: "right-0 top-0 h-screen w-[450px] transform-none",
+            off: "right-0 top-0 h-screen w-[450px] translate-x-full",
           },
         },
       },
@@ -77,7 +77,7 @@ function DrawerList() {
                     <p className="text-gray-300 text-center mb-2">
                         {currency === 'USD' ? `$ ${coin.current_price}` : 
                          currency === 'EUR' ? `€ ${coin.current_price} `: 
-                         currency === 'CAD' ? `C$ ${coin.current_price}` : coin.current_price}
+                         currency === 'RUB' ? `₽ ${coin.current_price}` : coin.current_price}
                     </p>
                     <button
                       onClick={() => removeCoin(coin.id)}
@@ -88,7 +88,7 @@ function DrawerList() {
                   </li>
                 ))
               ) : (
-                <p className="text-white text-center">No coins in your watchlist.</p>
+                <p className="text-white text-center text-nowrap font-montserrat font-semibold ">No coins in your watchlist.</p>
               )}
             </ul>
           </div>

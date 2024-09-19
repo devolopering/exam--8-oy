@@ -48,8 +48,8 @@ export default function Coins() {
     table: {
       row: {
         base: "group/row",
-        hovered: "hover:bg-transparent",
-        striped: "odd:bg-transparent even:bg-transparent",
+        hovered: "hover:bg-[transparent]",
+        striped: "odd:bg-[transparent] even:bg-[transparent]",
       },
       head: {
         base: "group/head text-xs uppercase text-gray-700 dark:text-[#87CEEB]",
@@ -64,7 +64,7 @@ export default function Coins() {
       }
     },
     pages: {
-      base: "xs:mt-0 mt-2 inline-flex items-center -space-x-px",
+      base: "xs:mt-0 mt-2 inline-flex items-center gap-2 -space-x-px",
       showIcon: "inline-flex",
       previous: {
         base: "ml-0 rounded-full border-none bg-transparent px-3 py-3 mt-2 leading-tighttext-[#87CEEB] enabled:hover:bg-transparent enabled:hover:hover:text-[#87CEEB] dark:border-gray-700 dark:bg-transparent dark:text-[#87CEEB] enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
@@ -140,7 +140,10 @@ export default function Coins() {
                     </div>
                    
                   </Table.Cell>
-                  <Table.Cell className='text-white'>${coin.market_cap}</Table.Cell>
+                  <Table.Cell className='text-white'>
+                  {currency === 'USD' ? `$ ${coin.market_cap}` : 
+                   currency === 'EUR' ? `€ ${coin.market_cap} `: 
+                   currency === 'RUB' ? `₽ ${coin.market_cap}` : coin.market_cap}</Table.Cell>
                 </Table.Row>
               ))}
             </Table.Body>
