@@ -100,7 +100,7 @@ export default function Coins() {
         onChange={(e) => setSearchCoin(e.target.value)}
         type="text"
         placeholder="Search For a Crypto Currency.."
-        className="input w-full border-slate-500 mb-5 rounded-[5px]"
+        className="input w-full bg-transparent border-slate-500 mb-5 rounded-[5px]"
       />
           <Table striped className='border-b border-gray-600'>
             <Table.Head className="bg-[#87CEEB] font-montserrat font-bold text-sm px-4 py-5">
