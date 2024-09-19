@@ -44,7 +44,7 @@ function SingleCoin() {
             {coins.name}
           </h2>
         </div>
-        <p className="line-clamp-3 w-full mb-4">{coins.description.en}</p>
+        <p className="line-clamp-3 w-full mb-4 text-white">{coins.description.en}</p>
         <p className="text-white mb-5">
           <strong>Rank</strong>: {coins.market_cap_rank}
         </p>
