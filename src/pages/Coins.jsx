@@ -82,10 +82,10 @@ export default function Coins() {
     }
   };
 
-  const filteredCoins = coins.filter((coin) => 
-  coin.name.toLowerCase().includes(searchCoin.toLowerCase()) || 
-  coin.symbol.toLowerCase().includes(searchCoin.toLowerCase())
-);
+//   const filteredCoins = coins.filter((coin) => 
+//   coin.name.toLowerCase().includes(searchCoin.toLowerCase()) || 
+//   coin.symbol.toLowerCase().includes(searchCoin.toLowerCase())
+// );
 
   return (
     <div className="bg-[#14161A] max-w-[1920px] mx-auto mt-[78px]">
@@ -110,7 +110,7 @@ export default function Coins() {
               <Table.HeadCell>Market Cap</Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y font-roboto">
-              {filteredCoins.map((coin) => (
+              {coins.map((coin) => (
                 <Table.Row key={coin.id} className="dark:bg-transparent dark:border-gray-700">
                   <Table.Cell className="flex items-center gap-4 text-gray-900 dark:text-white">
                     <img className="w-[50px] h-[50px]" src={coin.image} alt={coin.name} />

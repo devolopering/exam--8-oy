@@ -10,7 +10,6 @@ export const CoinsProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-
   useEffect(() => {
     const storedCoins = getFromLocalStorage('selectedCoins');
     if (storedCoins) {
@@ -35,6 +34,5 @@ export const CoinsProvider = ({ children }) => {
     </CoinsContext.Provider>
   );
 };
-
 
 export const useCoins = () => useContext(CoinsContext);
