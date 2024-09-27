@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '/hero.jpg'; // import qilgan rasm
+import Hero from '/hero.jpg'; 
 import CoinsCarousel from './CoinsCarusel';
 
 function HeroSection() {
